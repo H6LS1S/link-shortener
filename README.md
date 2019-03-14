@@ -1,15 +1,15 @@
 <p align="center">
 	<a target="blank" href="http://nestjs.com/">
-		<img height="60" src="assets/images/mudules/nestjs.png" />
+		<img height="60" src="https://raw.githubusercontent.com/HELSIS666/link-shortener/master/assets/images/modules/nestjs.png" />
 	</a>
 	<a target="blank" href="https://typeorm.io/">
-		<img height="60" src="assets/images/mudules/typeorm.png" />
+		<img height="60" src="https://raw.githubusercontent.com/HELSIS666/link-shortener/master/assets/images/modules/typeorm.png" />
 	</a>
 	<a target="blank" href="https://www.docker.com/">
-		<img height="60" src=assets/images/mudules/docker.png" />
+		<img height="60" src="https://raw.githubusercontent.com/HELSIS666/link-shortener/master/assets/images/modules/docker.png" />
 	</a>
 	<a target="blank" href="https://www.openapis.org/">
-		<img height="60" src="assets/images/mudules/openapis.png" />
+		<img height="60" src="https://raw.githubusercontent.com/HELSIS666/link-shortener/master/assets/images/modules/openapis.png" />
 	</a>
 </p>
 
