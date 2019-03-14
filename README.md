@@ -27,6 +27,7 @@ Rest-API based in the
 
 
 ## In future :bulb:
+
  - ~~DbSchema creation~~ :heavy_check_mark:
  - ~~Install and configure project ecosystem~~ :heavy_check_mark:
  - User entities creation and Authentication flow
@@ -70,6 +71,44 @@ $ npm run start:prod
 ```
 
 
+## Environment variable :space_invader:
+
+The following are environment variables for different usage modules.
+The prefixes for .env **can only** be:
+ - For development: `development`
+ - For testing: `test`
+ - For production: `[ EMPTY ]`
+
+### Server:
+	NODE_TLS_REJECT_UNAUTHORIZED=0
+	NEST_PORT=80
+	NEST_API_PREFIX=/api/v1
+	NEST_ROOT_URL=//localhost + NEST_API_PREFIX
+
+### Authentication strategies:
+	NEST_DEF_STRATEGY=jwt
+	NEST_DEF_SESSION=false
+	JWT_SECRET_KEY=testToken
+	JWT_EXPIRES_TIME=3600
+
+### TypeORM:
+	TYPEORM_PORT=5432
+	TYPEORM_CONNECTION=postgres
+	TYPEORM_HOST=localhost
+	TYPEORM_USERNAME=postgres
+	TYPEORM_PASSWORD=postgres
+	TYPEORM_DATABASE=link_exapmle
+	TYPEORM_LOGGING=true
+	TYPEORM_SYNCHRONIZE=true
+	TYPEORM_DROP_SCHEMA=true
+	TYPEORM_ENTITIES=src/modules/**/*.entity.ts
+	TYPEORM_SUBSCRIBERS=src/modules/**/*.subscriber.ts
+	TYPEORM_MIGRATIONS_DIR=src/database/migrations/
+	TYPEORM_MIGRATIONS_TABLE_NAME=migration_project
+	TYPEORM_ENTITIES=src/modules/**/*.entity.ts
+	TYPEORM_MIGRATIONS_DIR=src/database/migrations/
+
+
 ## Support :octocat:
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors
@@ -79,4 +118,4 @@ If you'd like to join them, please [read more here](https://docs.nestjs.com/supp
 
 ## License :scroll:
 
-  Nest is [MIT licensed](LICENSE).
+Nest is [MIT licensed](LICENSE).
