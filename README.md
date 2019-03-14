@@ -1,5 +1,5 @@
 <p align="center">
-	<a target="blank" href="http://nestjs.com/">
+	<a target="blank" href="https://nestjs.com/">
 		<img height="60" src="https://raw.githubusercontent.com/HELSIS666/link-shortener/master/assets/images/modules/nestjs.png" />
 	</a>
 	<a target="blank" href="https://typeorm.io/">
