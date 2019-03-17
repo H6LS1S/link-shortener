@@ -64,6 +64,7 @@
       "json",
       "ts"
     ],
+		"verbose": true,
     "rootDir": "src",
     "testRegex": ".spec.ts$",
     "transform": {
