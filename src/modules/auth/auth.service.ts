@@ -12,15 +12,22 @@ export class AuthService {
 	) {}
 
   async createToken() {
-    const user: JwtPayload = { email: 'test@email.com' };
-    const accessToken = this.jwtService.sign(user);
-    return {
-      expiresIn: this.configService.getSetting('JWT_EXPIRES_TIME'),
-      accessToken,
-    };
+		return await 1;
   }
 
-  async validateUser(payload: JwtPayload): Promise<any> {
-    return {};
+	async selectToken() {
+		return await 1;
+	}
+
+	async updateToken() {
+		return await 1;
+	}
+
+	async deleteToken() {
+		return await 1;
+	}
+
+  private async validateToken(payload: JwtPayload): Promise<any> {
+    return await 1;
   }
 }
