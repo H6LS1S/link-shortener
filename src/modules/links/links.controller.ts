@@ -9,25 +9,25 @@ export class LinksController {
 	constructor(private readonly linksService: LinksService) {}
 
 	@Post()
-	@UseGuards(AuthGuard())
+	@UseGuards(AuthGuard('jwt'))
 	async createPair(): Promise<any> {
 		return await this.linksService.createPair();
 	}
 
 	@Get()
-	@UseGuards(AuthGuard())
+	@UseGuards(AuthGuard('jwt'))
 	async selectPair(): Promise<any> {
 		return await this.linksService.selectPair();
 	}
 
 	@Put()
-	@UseGuards(AuthGuard())
+	@UseGuards(AuthGuard('jwt'))
 	async updatePair(): Promise<any> {
 		return await this.linksService.updatePair();
 	}
 
 	@Delete()
-	@UseGuards(AuthGuard())
+	@UseGuards(AuthGuard('jwt'))
 	async deletePair(): Promise<any> {
 		return await this.linksService.deletePair();
 	}

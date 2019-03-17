@@ -19,13 +19,13 @@ export class AuthController {
   }
 
 	@Put('token')
-	@UseGuards(AuthGuard())
+	@UseGuards(AuthGuard('jwt'))
 	async updateToken(): Promise<any> {
 		return await this.authService.updateToken();
 	}
 
 	@Delete('token')
-	@UseGuards(AuthGuard())
+	@UseGuards(AuthGuard('jwt'))
 	async deleteToken(): Promise<any> {
 		return await this.authService.deleteToken();
 	}

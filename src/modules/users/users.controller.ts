@@ -8,26 +8,26 @@ import { UsersService } from './users.service';
 export class UsersController {
 	constructor(private readonly usersService: UsersService) {}
 
-	@Post()
-	@UseGuards(AuthGuard())
-	async createUser(): Promise<any> {
-		return await this.usersService.createUser();
-	}
-
-	@Get()
-	@UseGuards(AuthGuard())
+	@Get(':id')
+	@UseGuards(AuthGuard('jwt'))
 	async selectUser(): Promise<any> {
 		return await this.usersService.selectUser();
 	}
 
-	@Put('setting')
-	@UseGuards(AuthGuard())
+	@Post('create')
+	@UseGuards(AuthGuard('jwt'))
+	async createUser(): Promise<any> {
+		return await this.usersService.createUser();
+	}
+
+	@Put()
+	@UseGuards(AuthGuard('jwt'))
 	async updateUser(): Promise<any> {
 		return await this.usersService.updateUser();
 	}
 
-	@Delete('delete')
-	@UseGuards(AuthGuard())
+	@Delete()
+	@UseGuards(AuthGuard('jwt'))
 	async deleteUser(): Promise<any> {
 		return await this.usersService.deleteUser();
 	}
