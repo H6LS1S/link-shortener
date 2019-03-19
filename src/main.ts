@@ -13,17 +13,15 @@ async function bootstrap() {
     .setTitle('Link shorter example')
     .setDescription('The app API description')
     .setVersion('1.0')
-    .addTag('H6LS1S')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
 
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('docs/api', app, document);
 
   await app
     .use(bodyParser.json())
     .useGlobalPipes(new ValidationPipe())
-    .setGlobalPrefix(process.env.NEST_API_PREFIX)
     .listen(port);
 
 }
